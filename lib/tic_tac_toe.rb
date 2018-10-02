@@ -86,16 +86,19 @@ def won?(board)
       end
     end
   end
+
  def full?(board)
   if board.none?{|i| i == " "}
     return true
   end
 end
+
  def draw?(board)
   if board.none?{|i| i == " "} && !won?(board)
     return true
   end
 end
+
  def over?(board)
   if full?(board) || draw?(board)
     return true
@@ -103,6 +106,7 @@ end
     return true
   end
 end
+
  def winner(board)
   if draw?(board)
     return false
