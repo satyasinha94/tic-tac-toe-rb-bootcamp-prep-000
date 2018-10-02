@@ -1,3 +1,4 @@
+
 WIN_COMBINATIONS =
 [[0,1,2], #top row
 [3,4,5], #middle row
@@ -7,3 +8,11 @@ WIN_COMBINATIONS =
 [2,5,8], #right column
 [0,4,8], #diagonal
 [6,4,2]] #diagonal
+
+def display_board
+  puts "   |   |   "
+  puts "-----------"
+  puts "   |   |   "
+  puts "-----------"
+  puts "   |   |   "
+end
