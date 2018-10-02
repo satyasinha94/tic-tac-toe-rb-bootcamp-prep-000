@@ -49,7 +49,7 @@ def turn(board)
     input = gets
     index = input_to_index(input)
   end
-  move(board, index, value)
+  move(board, index)
   display_board(board)
 end
 
