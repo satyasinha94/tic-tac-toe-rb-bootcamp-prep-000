@@ -128,7 +128,7 @@ end
 end
 
 def play(board)
-while !over?(board)  do
+until over?(board)  do
   current_player(board)
   turn(board)
 end
