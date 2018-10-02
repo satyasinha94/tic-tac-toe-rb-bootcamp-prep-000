@@ -69,3 +69,54 @@ end
     return "O"
   end
 end
+
+def won?(board)
+    WIN_COMBINATIONS.detect do |win_combination|
+      win_index_1 = win_combination[0]
+      win_index_2 = win_combination[1]
+      win_index_3 = win_combination[2]
+      position_1 = board[win_index_1]
+      position_2 = board[win_index_2]
+      position_3 = board[win_index_3]
+       if position_1 == "X" && position_2 == "X" && position_3 == "X" || position_1 == "O" && position_2 == "O" && position_3 == "O"
+        return win_combination
+      else
+        false
+      end
+    end
+  end
+ def full?(board)
+  if board.none?{|i| i == " "}
+    return true
+  end
+end
+ def draw?(board)
+  if board.none?{|i| i == " "} && !won?(board)
+    return true
+  end
+end
+ def over?(board)
+  if full?(board) || draw?(board)
+    return true
+  elsif won?(board) && !full?(board)
+    return true
+  end
+end
+ def winner(board)
+  if draw?(board)
+    return false
+  end
+  WIN_COMBINATIONS.detect do |win_combination|
+    win_index_1 = win_combination[0]
+    win_index_2 = win_combination[1]
+    win_index_3 = win_combination[2]
+    position_1 = board[win_index_1]
+    position_2 = board[win_index_2]
+    position_3 = board[win_index_3]
+     if position_1 == "X" && position_2 == "X" && position_3 == "X"
+      return "X"
+    elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
+      return "O"
+    end
+  end
+end
