@@ -132,7 +132,7 @@ def play(board)
     current_player(board)
     turn(board)
   end
-  if  over?(board) && draw?(board)
+  if draw?(board)
     return "Cat's Game!"
   end
 end
