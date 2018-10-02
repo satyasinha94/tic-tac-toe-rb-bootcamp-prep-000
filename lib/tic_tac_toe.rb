@@ -94,7 +94,7 @@ def won?(board)
 end
 
  def draw?(board)
-  if board.none?{|i| i == " "} && !won?(board)
+  if full?(board) && !won?(board)
     return true
   end
 end
