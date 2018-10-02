@@ -44,13 +44,14 @@ def turn(board)
   puts "Please enter 1-9:"
   input = gets
   index = input_to_index(input)
-  until valid_move?(board, index)
+  if valid_move?(board, index)
+    move(board, index, value = "X")
+  else
     puts "Invalid Move!"
     puts "Please enter 1-9:"
     input = gets
     index = input_to_index(input)
   end
-  move(board, index, value = "X")
 end
 
 def turn_count(board)
