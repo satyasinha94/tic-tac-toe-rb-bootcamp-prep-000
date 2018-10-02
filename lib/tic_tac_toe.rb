@@ -131,4 +131,7 @@ def play(board)
   until over?(board)
     turn(board)
   end
+  if draw?(board)
+    return "Cat's Game!"
+  end
 end
