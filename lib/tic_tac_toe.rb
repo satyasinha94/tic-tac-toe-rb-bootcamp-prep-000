@@ -129,6 +129,7 @@ end
 
 def play(board)
   until over?(board)
+    current_player(board)
     turn(board)
   end
   if  over?(board) && draw?(board)
