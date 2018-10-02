@@ -125,3 +125,9 @@ end
     end
   end
 end
+
+def play(board)
+  until full?(board) || won?(board) || draw?(board)
+    turn(board)
+  end
+end
