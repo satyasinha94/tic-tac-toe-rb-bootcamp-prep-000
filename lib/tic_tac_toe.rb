@@ -128,13 +128,11 @@ end
 end
 
 def play(board)
-until over?(board)  do
-  current_player(board)
-  turn(board)
-end
-if won?(board)
-  puts "Congratulations #{winner(board)}!"
-else
-  puts "Cat's Game!"
+  until over?(board)
+    current_player(board)
+    turn(board)
+  end
+  if draw?(board)
+    puts "Cat's Game!"
   end
 end
