@@ -1,3 +1,4 @@
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
 WIN_COMBINATIONS =
 [[0,1,2], #top row
@@ -49,7 +50,7 @@ def turn(board)
     input = gets
     index = input_to_index(input)
   end
-  move(board, index)
+  move(board, index, value = "X")
   display_board(board)
 end
 
