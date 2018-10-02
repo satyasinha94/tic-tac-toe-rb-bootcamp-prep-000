@@ -50,7 +50,7 @@ def turn(board)
     input = gets
     index = input_to_index(input)
   end
-  move(board, index, value = "X")
+  move(board, index, value)
   display_board(board)
 end
 
@@ -129,8 +129,5 @@ end
 def play(board)
   until over?(board)
     turn(board)
-  end
-  if winner(board) == "X"
-    return "Congratulations X!"
   end
 end
